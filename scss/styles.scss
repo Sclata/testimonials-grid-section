@@ -1,1 +1,11 @@
 @use "base/reset";
+@use "base/typography";
+@use "utils/variables";
+@use "components/testimonial_card";
+@use "layout/main_layout";
+
+
+* {
+    font-family: "Barlow Semi Condensed" !important;
+}
+

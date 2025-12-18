@@ -1,0 +1,271 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  border-radius: 0;
+}
+
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url("../assets/fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url("../assets/fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-SemiBold.ttf");
+  font-weight: 600;
+}
+.testimonial {
+  border-radius: 0.5em;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  box-shadow: 2em 2em 1em hsl(0, 0%, 81%);
+}
+.testimonial--purple {
+  background-color: hsl(263, 55%, 52%);
+}
+.testimonial--grey {
+  background-color: hsl(217, 19%, 35%);
+}
+.testimonial--darkblue {
+  background-color: hsl(219, 29%, 14%);
+}
+.testimonial--white {
+  background-color: hsl(0, 0%, 100%);
+}
+.testimonial__header {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+.testimonial__avatar {
+  border-radius: 50%;
+  width: 1.75em;
+  height: 1.75em;
+}
+.testimonial__avatar--bordered {
+  border-style: solid;
+  border-width: 0.125em;
+  border-color: hsl(264, 82%, 70%);
+}
+.testimonial__author {
+  font-size: 0.8125rem;
+  line-height: 110%;
+  letter-spacing: 0;
+  margin-bottom: 0.25em;
+}
+.testimonial__author--light {
+  color: hsl(0, 0%, 100%);
+}
+.testimonial__author--dark {
+  color: hsl(217, 19%, 35%);
+}
+.testimonial__role {
+  font-size: 0.6875rem;
+  line-height: 110%;
+  letter-spacing: 0;
+}
+.testimonial__role--purple {
+  color: hsl(260, 100%, 95%);
+}
+.testimonial__role--lightgrey {
+  color: hsl(0, 0%, 81%);
+}
+.testimonial__role--medgray {
+  color: hsl(224, 10%, 45%);
+}
+.testimonial__role--white {
+  color: hsl(0, 0%, 100%);
+}
+.testimonial__summary {
+  font-size: 1.25rem;
+  line-height: 120%;
+  letter-spacing: 0;
+}
+.testimonial__summary--light {
+  color: hsl(0, 0%, 100%);
+}
+.testimonial__summary--medium {
+  color: hsl(0, 0%, 81%);
+}
+.testimonial__summary--dark {
+  color: hsl(217, 19%, 35%);
+}
+.testimonial__testimonial {
+  font-size: 0.8125rem;
+  line-height: 140%;
+  letter-spacing: 0;
+}
+.testimonial__testimonial--purple {
+  color: hsl(260, 100%, 95%);
+}
+.testimonial__testimonial--light {
+  color: hsl(214, 17%, 92%);
+}
+.testimonial__testimonial--dark {
+  color: hsl(224, 10%, 45%);
+}
+
+html,
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  max-width: 100%;
+  margin: 2em;
+  display: grid;
+  grid-auto-flow: dense;
+  gap: 2em;
+}
+
+.quote {
+  position: absolute;
+  display: none;
+  width: 6.5em;
+  height: 6.5em;
+}
+
+@media screen and (min-width: 41em) {
+  main {
+    max-width: 41em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 18.1875em);
+  }
+  #daniel,
+  #patrick,
+  #kira {
+    grid-column: 1/span 2;
+  }
+  .quote {
+    display: block;
+    translate: 21.5em -2em;
+  }
+  .testimonial__summary {
+    z-index: 1;
+  }
+}
+@media screen and (min-width: 70em) {
+  main {
+    max-width: 70em;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 18.1875em);
+  }
+  #patrick {
+    grid-row: 2;
+    grid-column: 2/span 2;
+  }
+  #kira {
+    grid-column: 4;
+    grid-row: 1/span 2;
+  }
+}
+* {
+  font-family: "Barlow Semi Condensed" !important;
+}
